@@ -1,0 +1,54 @@
+.ba-header-wrap {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, .1) 100%);
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid white;
+
+    .logo {
+        font-size: 30px;
+    }
+
+    [data-toggle] {
+        display: block;
+        margin: 0 10px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    @include breakpoint(medium) {
+        [data-toggle] {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+        }
+    }
+
+    a {
+        svg {
+            margin-right: 5px;
+        }
+
+        color: white;
+
+        &:hover {
+            text-decoration-line: line-through;
+            color: white;
+        }
+    }
+
+    .menu.align-right {
+        li {
+            padding: 27px 5px;
+            border-left: 1px solid white;
+        }
+    }
+}

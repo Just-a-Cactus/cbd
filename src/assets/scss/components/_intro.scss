@@ -1,0 +1,72 @@
+.ba-intro-wrapper {
+    min-height: 100vh;
+    background: green url("../img/intro_bg.jpg") no-repeat;
+    background-size: cover;
+    color: white;
+
+    .intro-text {
+        @include breakpoint(medium) {
+            padding-top: 30vh;
+        }
+
+        padding-top: 15vh;
+
+        h1 {
+            letter-spacing: 0.15em;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: white;
+            border-bottom: 1px solid white;
+        }
+    }
+}
+
+.shopping {
+    border: 1px solid white;
+    padding: 3px;
+
+    svg {
+        display: none;
+    }
+
+    @include breakpoint(medium) {
+        padding: 20px;
+
+        svg {
+            display: inline;
+        }
+    }
+
+    margin-bottom: 30px;
+    transition: .5s;
+
+    &:hover {
+        border: 1px solid black;
+
+        background: rgba(255, 255, 255, .5);
+
+        span {
+            color: black;
+        }
+
+        border-radius: 30px;
+
+        svg {
+            opacity: 0;
+        }
+    }
+
+    svg {
+        margin-bottom: 7px;
+    }
+}
